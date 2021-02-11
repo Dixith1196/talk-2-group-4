@@ -1,35 +1,30 @@
+import count from './count.js'
 
+var i = 0;
 
-var click = 0;
-var revClick = 0;
-var textArr = ["1", "2", "3", "4", "5"]
-var reverseTextArr = ["5", "4", "3", "2", "1"]
-var clickStr = ""
+function main(){
+document.getElementById('Increment').addEventListener('click', add)
+document.getElementById('Decrement').addEventListener('click', Subtract)
+}
+window.addEventListener("load", main)
 
-function readText(){
-    console.log("this is calling")
-    if(click < textArr.length){
-        clickStr = textArr[click]
-        let utterance = new SpeechSynthesisUtterance(clickStr);
-        speechSynthesis.speak(utterance);
-        click = click + 1
-    }else{
-        let utterance = new SpeechSynthesisUtterance(textArr[textArr.length - 1]);
-        speechSynthesis.speak(utterance);
-        click = 0;
-    } 
+async function add(){
+    i = i + 1
+var str = count[0]
+let utterance = new SpeechSynthesisUtterance(str + (i));
+speechSynthesis.speak(utterance);
 }
 
-function reverseReadText(){
-    revClick = 0;
-    if(revClick < reverseTextArr.length){
-        clickStr = reverseTextArr[revClick]
-        let utterance = new SpeechSynthesisUtterance(clickStr);
-        speechSynthesis.speak(utterance);
-        revClick = revClick + 1
-    }else{
-        let utterance = new SpeechSynthesisUtterance(reverseTextArr[revClick]);
-        speechSynthesis.speak(utterance);
-        revClick = 0;
-    } 
+async function Subtract(){
+    var str = count[1]
+   i = i - 1
+   if(i < 0){
+    let utterance = new SpeechSynthesisUtterance(str + "Negative" + (i));
+    speechSynthesis.speak(utterance);
+   }else{
+    let utterance = new SpeechSynthesisUtterance(str + (i));
+    speechSynthesis.speak(utterance);
+   }
+  
+    
 }

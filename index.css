@@ -4,13 +4,19 @@ html {
 }
 
 body {
-  margin: 0 0 100px;
+  margin: 0 0 0 0;
+  background-color: white;
+}
+a{
+  color: white;
 }
 
 footer {
-  background-color: #1abc9c;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(169,169,169);
   position: absolute;
-  color: white;
+  color: rgb(245, 245, 245);
   left: 0;
   bottom: 0;
   height: 100px;
@@ -27,30 +33,16 @@ html {
 }
 
 .container{
-  height: 25vh;
-  margin: 32px;
-  background-color: red;
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100px;
+  margin: 1%;
+  width: 100px;
 }
 
-.header {
+header {
     padding: 10px;
     text-align: center;
-    background: #1abc9c;
-    color: white;
+    background: rgb(169,169,169);
+    color: rgb(245, 245, 245);
     font-size: 30px;
   }
-  .footer {
-    padding: 10px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-    font-size: 30px;
-    bottom: 0px;
-    display: flex;
-    align-self: flex-end;
-    justify-self: flex-end;
-  }
+  
