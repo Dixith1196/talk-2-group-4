@@ -85,7 +85,7 @@ function isValidType(location) {
 }
 
 function isValidCoordinates(coordinates) {
-    if (coordinates.length != 4)
+    if (coordinates.length != 3)
         return false;
 
     coordinates.forEach(function (coordinate, index) {
@@ -112,7 +112,7 @@ function isValidArguments(device, location) {
 
 function isInsidetrinagle(device, location) {
     try {
-        let checkValid = isValidArguments(device, location) && isValidDevice(device) && isValidType(location) && isValidLocation(location);
+        let checkValid = isValidArguments(device, location) && isValidDevice(device) &&  isValidLocation(location);
         if (checkValid) {
             let x = device.coords.latitude;
             let y = device.coords.longitude;
