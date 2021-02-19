@@ -2,7 +2,7 @@
 A one page web application that utters some speech when you click on either of the colors(purple and sky blue).
 
 ## Team members
-Pruthvi - Client
+Pruthvi - tester
 
 Sai Krishna - Developer
 
