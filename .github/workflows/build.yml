@@ -8,19 +8,16 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
       - uses: stefanoeb/eslint-action@1.0.2
   prettier:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-    - uses: actions/checkout@v2
     - uses: mikeal/publish-to-github-action@master
     - run: npm run format
     - run: git status
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
     - name: Run Jest
       uses: stefanoeb/jest-action@1.0.3
